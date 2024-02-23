@@ -2,13 +2,14 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TextInput, Button, Image, ImageBackground,} from 'react-native';
 
 export default function App() {
+  const fundo = { uri: '' };
+  
+
 return (
 <View style={styles.container}>
 
-<ImageBackground
-  source={{ uri: 'https://img.freepik.com/vetores-gratis/abstrato-branco-em-estilo-de-papel-3d_23-2148400085.jpg?w=996&t=st=1708707074~exp=1708707674~hmac=23184ae2c3f5840f486c8090e981dadd3e63f55f8fc11c7b0cbc3bbd105d72dc'}}
-/>
- 
+
+
 <Image
         style={styles.image}
         source={{ uri: 'https://static.vecteezy.com/ti/vetor-gratis/p3/16131462-icone-de-login-em-estilo-simples-ilustracaoial-de-acesso-seguro-de-pessoas-em-fundo-branco-isolado-conceito-de-negocio-aprovado-por-senha-vetor.jpg' }}
@@ -26,7 +27,7 @@ return (
     placeholder='Digite Sua Senha'
     inputMode={'text'}
     style={styles.senha}
-    securyTextEntry={false}
+    secureTextEntry={true}
     />
 
     <Button
@@ -76,7 +77,10 @@ alignItems: 'center',
   height: 200,
 },
 
-backgroundImage: {
+
+imagemfundo: {
+  width: '100%',
+  height: '100%',
   resizeMode: 'cover',
 },
 })
